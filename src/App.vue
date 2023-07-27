@@ -2,7 +2,7 @@
 
 <template>
   <header>
-    <h1>Job Search</h1>
+    <h1 class="mt-8 text-center text-6xl">Job Search</h1>
   </header>
 </template>
 
