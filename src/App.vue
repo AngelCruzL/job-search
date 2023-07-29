@@ -1,9 +1,14 @@
-<script setup></script>
+<script>
+import MainNav from '@/components/MainNav.vue'
+
+export default {
+  name: 'App',
+  components: {
+    MainNav
+  }
+}
+</script>
 
 <template>
-  <header>
-    <h1 class="mt-8 text-center text-6xl">Job Search</h1>
-  </header>
+  <MainNav />
 </template>
-
-<style scoped></style>
