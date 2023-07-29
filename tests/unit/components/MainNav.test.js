@@ -9,4 +9,19 @@ describe('MainNav', () => {
 
     expect(companyName).toBeInTheDocument()
   })
+
+  it('should display the menu items for navigation', () => {
+    render(MainNav)
+    const menuItems = screen.getAllByRole('listitem')
+    const menuItemsText = menuItems.map((item) => item.textContent)
+
+    expect(menuItemsText).toEqual([
+      'Teams',
+      'Locations',
+      'Life at ÁC Corp',
+      'How we hire',
+      'Students',
+      'Jobs'
+    ])
+  })
 })
