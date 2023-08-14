@@ -1,9 +1,13 @@
 <script>
 import ActionButton from '@/components/ActionButton.vue'
+import ProfileImage from '@/components/ProfileImage.vue'
 
 export default {
   name: 'MainNav',
-  components: { ActionButton },
+  components: {
+    ActionButton,
+    ProfileImage
+  },
   data() {
     return {
       company: 'ÁC Careers',
@@ -15,7 +19,8 @@ export default {
         'How we hire',
         'Students',
         'Jobs'
-      ]
+      ],
+      isLoggedIn: false
     }
   }
 }
@@ -42,7 +47,8 @@ export default {
         </nav>
 
         <div class="ml-auto flex h-full items-center">
-          <ActionButton />
+          <ProfileImage v-if="isLoggedIn" />
+          <ActionButton v-else />
         </div>
       </div>
     </div>
