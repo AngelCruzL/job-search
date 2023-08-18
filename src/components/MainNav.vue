@@ -25,6 +25,11 @@ export default {
       isLoggedIn: false
     }
   },
+  computed: {
+    headerHeightClass() {
+      return this.isLoggedIn ? 'h-32' : 'h-16'
+    }
+  },
   methods: {
     loginUser() {
       this.isLoggedIn = true
@@ -34,7 +39,7 @@ export default {
 </script>
 
 <template>
-  <header class="w-full text-sm">
+  <header :class="['w-full', 'text-sm', headerHeightClass]">
     <div class="fixed left-0 top-0 h-16 w-full bg-white">
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-gray-1 px-8"

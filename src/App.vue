@@ -1,14 +1,17 @@
 <script>
 import MainNav from '@/components/MainNav.vue'
+import PageHero from '@/components/PageHero.vue'
 
 export default {
   name: 'App',
   components: {
+    PageHero,
     MainNav
   }
 }
 </script>
 
 <template>
-  <MainNav />
+  <main-nav />
+  <page-hero />
 </template>
