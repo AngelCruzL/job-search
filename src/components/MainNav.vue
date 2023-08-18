@@ -53,7 +53,7 @@ export default {
 
         <div class="ml-auto flex h-full items-center">
           <ProfileImage v-if="isLoggedIn" />
-          <ActionButton v-else @click="loginUser" />
+          <ActionButton v-else :is-primary="false" text="Sign In" @click="loginUser" />
         </div>
       </div>
     </div>
