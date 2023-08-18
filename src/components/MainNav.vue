@@ -1,12 +1,14 @@
 <script>
 import ActionButton from '@/components/ActionButton.vue'
 import ProfileImage from '@/components/ProfileImage.vue'
+import SubNav from '@/components/SubNav.vue'
 
 export default {
   name: 'MainNav',
   components: {
     ActionButton,
-    ProfileImage
+    ProfileImage,
+    SubNav
   },
   data() {
     return {
@@ -52,10 +54,12 @@ export default {
         </nav>
 
         <div class="ml-auto flex h-full items-center">
-          <ProfileImage v-if="isLoggedIn" />
-          <ActionButton v-else text="Sign In" type="primary" @click="loginUser" />
+          <profile-image v-if="isLoggedIn" />
+          <action-button v-else text="Sign In" type="primary" @click="loginUser" />
         </div>
       </div>
+
+      <sub-nav v-if="isLoggedIn" />
     </div>
   </header>
 </template>
