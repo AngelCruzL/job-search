@@ -1,10 +1,11 @@
 <script>
 import PageHeadline from '@/components/PageHeadline.vue'
 import JobSearchForm from '@/components/JobSearchForm.vue'
+import PageHeroImage from '@/components/PageHeroImage.vue'
 
 export default {
   name: 'PageHero',
-  components: { JobSearchForm, PageHeadline }
+  components: { PageHeroImage, JobSearchForm, PageHeadline }
 }
 </script>
 
@@ -19,7 +20,9 @@ export default {
           <job-search-form />
         </div>
 
-        <div class="col-span-5 col-start-7"></div>
+        <div class="col-span-5 col-start-7 self-center justify-self-center">
+          <page-hero-image />
+        </div>
 
         <div class="col-span-1 col-start-12"></div>
       </div>
