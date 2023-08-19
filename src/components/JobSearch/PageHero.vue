@@ -1,7 +1,7 @@
 <script>
-import PageHeadline from '@/components/PageHeadline.vue'
-import JobSearchForm from '@/components/JobSearchForm.vue'
-import PageHeroImage from '@/components/PageHeroImage.vue'
+import PageHeadline from '@/components/JobSearch/PageHeadline.vue'
+import JobSearchForm from '@/components/JobSearch/JobSearchForm.vue'
+import PageHeroImage from '@/components/JobSearch/PageHeroImage.vue'
 
 export default {
   name: 'PageHero',

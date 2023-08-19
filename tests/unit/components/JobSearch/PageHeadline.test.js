@@ -1,7 +1,7 @@
 import { nextTick } from 'vue'
 import { render, screen } from '@testing-library/vue'
 
-import PageHeadline from '@/components/PageHeadline.vue'
+import PageHeadline from '@/components/JobSearch/PageHeadline.vue'
 
 describe('PageHeadline', () => {
   beforeEach(() => vi.useFakeTimers())

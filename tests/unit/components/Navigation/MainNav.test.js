@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/vue'
 import userEvent from '@testing-library/user-event'
 
-import MainNav from '@/components/MainNav.vue'
+import MainNav from '@/components/Navigation/MainNav.vue'
 
 describe('MainNav', () => {
   const renderMainNav = () => {
@@ -39,7 +39,7 @@ describe('MainNav', () => {
   describe('when the user logs in', () => {
     it('should display the user profile picture', async () => {
       renderMainNav()
-      
+
       let profileImage = screen.queryByRole('img', {
         name: /user profile image/i
       })

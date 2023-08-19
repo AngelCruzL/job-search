@@ -1,6 +1,6 @@
 <script>
-import MainNav from '@/components/MainNav.vue'
-import PageHero from '@/components/PageHero.vue'
+import MainNav from '@/components/Navigation/MainNav.vue'
+import PageHero from '@/components/JobSearch/PageHero.vue'
 
 export default {
   name: 'App',
