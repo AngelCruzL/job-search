@@ -1,9 +1,10 @@
 <script>
 import ActionButton from '@/components/Shared/ActionButton.vue'
+import TextInput from '@/components/Shared/TextInput.vue'
 
 export default {
   name: 'JobSearchForm',
-  components: { ActionButton },
+  components: { TextInput, ActionButton },
   data() {
     return {
       role: '',
@@ -22,12 +23,11 @@ export default {
     <div class="flex h-full flex-1 flex-nowrap text-base font-light">
       <div class="relative flex h-full flex-1 items-center pr-3">
         <label class="absolute -top-10 left-0" for="role">Role</label>
-        <input
+        <text-input
           id="role"
-          v-model="role"
-          class="w-full text-lg font-normal focus:outline-none"
+          :value="role"
           placeholder="Software engineer"
-          type="text"
+          @handle-input="role = $event"
         />
       </div>
 
@@ -39,12 +39,11 @@ export default {
 
       <div class="relative flex h-full flex-1 items-center pl-3">
         <label class="absolute -top-10 left-0" for="location">Where?</label>
-        <input
+        <text-input
           id="location"
-          v-model="location"
-          class="w-full text-lg font-normal focus:outline-none"
+          :value="location"
           placeholder="CDMX"
-          type="text"
+          @handle-input="location = $event"
         />
       </div>
     </div>
