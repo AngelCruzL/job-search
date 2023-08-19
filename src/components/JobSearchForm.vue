@@ -1,11 +1,15 @@
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
 import ActionButton from '@/components/ActionButton.vue'
 
 export default {
   name: 'JobSearchForm',
-  components: { ActionButton, FontAwesomeIcon }
+  components: { ActionButton },
+  data() {
+    return {
+      role: '',
+      location: ''
+    }
+  }
 }
 </script>
 
@@ -20,6 +24,7 @@ export default {
         <label class="absolute -top-10 left-0" for="role">Role</label>
         <input
           id="role"
+          v-model="role"
           class="w-full text-lg font-normal focus:outline-none"
           placeholder="Software engineer"
           type="text"
@@ -36,6 +41,7 @@ export default {
         <label class="absolute -top-10 left-0" for="location">Where?</label>
         <input
           id="location"
+          v-model="location"
           class="w-full text-lg font-normal focus:outline-none"
           placeholder="CDMX"
           type="text"
