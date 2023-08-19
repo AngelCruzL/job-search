@@ -23,12 +23,7 @@ export default {
     <div class="flex h-full flex-1 flex-nowrap text-base font-light">
       <div class="relative flex h-full flex-1 items-center pr-3">
         <label class="absolute -top-10 left-0" for="role">Role</label>
-        <text-input
-          id="role"
-          :value="role"
-          placeholder="Software engineer"
-          @handle-input="role = $event"
-        />
+        <text-input id="role" v-model="role" placeholder="Software engineer" />
       </div>
 
       <span
@@ -39,12 +34,7 @@ export default {
 
       <div class="relative flex h-full flex-1 items-center pl-3">
         <label class="absolute -top-10 left-0" for="location">Where?</label>
-        <text-input
-          id="location"
-          :value="location"
-          placeholder="CDMX"
-          @handle-input="location = $event"
-        />
+        <text-input id="location" v-model="location" placeholder="CDMX" />
       </div>
     </div>
 
